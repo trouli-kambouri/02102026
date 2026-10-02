@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Point and Click Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="game">
+
+        <!-- ========================= -->
+        <!-- ROOM 1                     -->
+        <!-- ========================= -->
+
+        <div id="room1" class="room">
+
+            <button id="door" class="object">
+                Door
+            </button>
+
+            <button id="desk" class="object">
+                Desk
+            </button>
+
+            <button id="painting" class="object">
+                Painting
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- DESK ZOOM                  -->
+        <!-- ========================= -->
+
+        <div id="deskZoom" class="room hidden">
+
+            <button id="backFromDesk" class="backButton">
+                ← Back
+            </button>
+
+            <button id="drawer" class="object">
+                Drawer
+            </button>
+
+            <button id="key" class="object">
+                Key
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ROOM 2                     -->
+        <!-- ========================= -->
+
+        <div id="room2" class="room hidden">
+
+            <button id="backFromRoom2" class="backButton">
+                ← Back
+            </button>
+
+            <button id="paper" class="object">
+                Paper
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- MESSAGE                    -->
+        <!-- ========================= -->
+
+        <div id="message">
+
+            You are in a strange room.
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- INVENTORY                  -->
+        <!-- ========================= -->
+
+        <div id="inventory">
+
+            <strong>Inventory:</strong>
+
+            <span id="inventoryItems">
+                Empty
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

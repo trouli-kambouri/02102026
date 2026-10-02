@@ -1,0 +1,291 @@
+/* ========================= */
+/* GENERAL                   */
+/* ========================= */
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+#game {
+
+    width: 800px;
+
+    max-width: 95%;
+
+    margin: 30px auto;
+
+}
+
+
+/* ========================= */
+/* ROOMS                     */
+/* ========================= */
+
+.room {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 500px;
+
+    overflow: hidden;
+
+}
+
+
+/* Hide rooms when not being used */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* ========================= */
+/* CLICKABLE OBJECTS         */
+/* ========================= */
+
+.object {
+
+    position: absolute;
+
+    border: 2px solid transparent;
+
+    cursor: pointer;
+
+}
+
+
+/* Show a border when hovering over something */
+
+.object:hover {
+
+    border-color: white;
+
+}
+
+
+/* ========================= */
+/* ROOM 1                    */
+/* ========================= */
+
+#room1 {
+    
+    background-image: url("/images/bedroom.png");
+
+    background-size: cover;
+
+    background-position: center;;
+
+}
+
+
+/* Door */
+
+#door {
+
+    width: 100px;
+
+    height: 220px;
+
+    right: 50px;
+
+    top: 140px;
+
+    background-color: #513426;
+
+}
+
+
+/* Desk */
+
+#desk {
+
+    width: 300px;
+
+    height: 100px;
+
+    left: 250px;
+
+    bottom: 70px;
+
+    background-color: #65452c;
+
+}
+
+
+/* Painting */
+
+#painting {
+
+    width: 150px;
+
+    height: 120px;
+
+    left: 70px;
+
+    top: 80px;
+
+    background-color: #c7ad7a;
+
+}
+
+
+/* ========================= */
+/* DESK ZOOM                 */
+/* ========================= */
+
+#deskZoom {
+
+    background-color: #888;
+
+}
+
+
+/*
+    These objects are now much
+    larger because we are
+    looking closely at the desk.
+*/
+
+
+#drawer {
+
+    width: 300px;
+
+    height: 100px;
+
+    left: 250px;
+
+    top: 180px;
+
+    background-color: #4b301f;
+
+}
+
+
+#key {
+
+    width: 80px;
+
+    height: 40px;
+
+    right: 180px;
+
+    bottom: 100px;
+
+    background-color: gold;
+
+}
+
+
+/* ========================= */
+/* ROOM 2                    */
+/* ========================= */
+
+#room2 {
+
+    background-color: #59616b;
+
+}
+
+
+/* Paper */
+
+#paper {
+
+    width: 150px;
+
+    height: 200px;
+
+    left: 320px;
+
+    top: 150px;
+
+    background-color: white;
+
+}
+
+
+/* ========================= */
+/* BACK BUTTON               */
+/* ========================= */
+
+.backButton {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    z-index: 10;
+
+    padding: 10px 20px;
+
+    background-color: #222;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+.backButton:hover {
+
+    background-color: #444;
+
+}
+
+
+/* ========================= */
+/* MESSAGE                   */
+/* ========================= */
+
+#message {
+
+    min-height: 50px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    background-color: white;
+
+}
+
+
+/* ========================= */
+/* INVENTORY                 */
+/* ========================= */
+
+#inventory {
+
+    min-height: 60px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    background-color: #333;
+
+    color: white;
+
+}
+
+
+#inventoryItems {
+
+    color: gold;
+
+}
