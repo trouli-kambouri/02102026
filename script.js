@@ -11,9 +11,9 @@ let hasKey = false;
 // GET HTML ELEMENTS
 // ========================================
 
-let room1 = document.getElementById("room1");
+let bedroom = document.getElementById("bedroom");
 
-let deskZoom = document.getElementById("deskZoom");
+let catZoom = document.getElementById("catZoom");
 
 let room2 = document.getElementById("room2");
 
@@ -37,11 +37,11 @@ function showMessage(text) {
 // FUNCTION: SHOW ROOM 1
 // ========================================
 
-function showRoom1() {
+function showbedroom() {
 
-    room1.classList.remove("hidden");
+    bedroom.classList.remove("hidden");
 
-    deskZoom.classList.add("hidden");
+    catZoom.classList.add("hidden");
 
     room2.classList.add("hidden");
 
@@ -49,14 +49,14 @@ function showRoom1() {
 
 
 // ========================================
-// FUNCTION: SHOW DESK ZOOM
+// FUNCTION: SHOW cat ZOOM
 // ========================================
 
-function showDeskZoom() {
+function showcatZoom() {
 
-    room1.classList.add("hidden");
+    bedroom.classList.add("hidden");
 
-    deskZoom.classList.remove("hidden");
+    catZoom.classList.remove("hidden");
 
     room2.classList.add("hidden");
 
@@ -69,9 +69,9 @@ function showDeskZoom() {
 
 function showRoom2() {
 
-    room1.classList.add("hidden");
+    bedroom.classList.add("hidden");
 
-    deskZoom.classList.add("hidden");
+    catZoom.classList.add("hidden");
 
     room2.classList.remove("hidden");
 
@@ -79,32 +79,32 @@ function showRoom2() {
 
 
 // ========================================
-// CLICKING THE DESK
+// CLICKING THE cat
 // ========================================
 
-document.getElementById("desk").addEventListener("click", function() {
+document.getElementById("cat").addEventListener("click", function() {
 
-    showDeskZoom();
+    showcatZoom();
 
     showMessage(
-        "You look closely at the desk."
+        "You look closely at the cat."
     );
 
 });
 
-
+/*
 // ========================================
-// CLICKING THE DOOR
+// CLICKING THE bookcase
 // ========================================
 
-document.getElementById("door").addEventListener("click", function() {
+document.getElementById("bookcase").addEventListener("click", function() {
 
     if (hasKey == true) {
 
         showRoom2();
 
         showMessage(
-            "You unlock the door and enter the next room."
+            "You unlock the bookcase and enter the next room."
         );
 
     }
@@ -112,87 +112,74 @@ document.getElementById("door").addEventListener("click", function() {
     else {
 
         showMessage(
-            "The door is locked."
+            "The bookcase is locked."
         );
 
     }
 
 });
-
-
-// ========================================
-// CLICKING THE PAINTING
-// ========================================
-
-document.getElementById("painting").addEventListener("click", function() {
-
-    showMessage(
-        "It is an old painting. Something feels strange about it."
-    );
-
-});
-
+*/
 
 // ========================================
 // CLICKING THE KEY
 // ========================================
 
-document.getElementById("key").addEventListener("click", function() {
+/*        document.getElementById("key").addEventListener("click", function() {
 
-    if (hasKey == false) {
+            if (hasKey == false) {
 
-        hasKey = true;
+                hasKey = true;
 
-        showMessage(
-            "You picked up the key."
-        );
+                showMessage(
+                    "You picked up the key."
+                );
 
-        // Remove the key from the desk
+                // Remove the key from the cat
 
-        document.getElementById("key").style.display = "none";
-
-
-        // Add key to inventory
-
-        inventoryItems.textContent = "🔑 Key";
-
-    }
-
-});
+                document.getElementById("key").style.display = "none";
 
 
+                // Add key to inventory
+
+                inventoryItems.textContent = "🔑 Key";
+
+            }
+
+        });
+
+
+        // ========================================
+        // CLICKING THE DRAWER
+        // ========================================
+
+        document.getElementById("drawer").addEventListener("click", function() {
+
+            if (hasKey == true) {
+
+                showMessage(
+                    "The drawer is empty."
+                );
+
+            }
+
+            else {
+
+                showMessage(
+                    "The drawer is locked."
+                );
+
+            }
+
+        });
+
+*/
 // ========================================
-// CLICKING THE DRAWER
+// BACK FROM cat
 // ========================================
 
-document.getElementById("drawer").addEventListener("click", function() {
+document.getElementById("backFromcat").addEventListener("click", function() {
 
-    if (hasKey == true) {
-
-        showMessage(
-            "The drawer is empty."
-        );
-
-    }
-
-    else {
-
-        showMessage(
-            "The drawer is locked."
-        );
-
-    }
-
-});
-
-
-// ========================================
-// BACK FROM DESK
-// ========================================
-
-document.getElementById("backFromDesk").addEventListener("click", function() {
-
-    showRoom1();
+    showbedroom();
 
     showMessage(
         "You return to the room."
@@ -207,7 +194,7 @@ document.getElementById("backFromDesk").addEventListener("click", function() {
 
 document.getElementById("backFromRoom2").addEventListener("click", function() {
 
-    showRoom1();
+    showbedroom();
 
     showMessage(
         "You return to the first room."
